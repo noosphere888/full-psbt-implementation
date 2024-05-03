@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation 'io.samourai.code.wallet:ExtLibJ:0.0.31'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'org.bitcoinj:bitcoinj-core:0.16.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
